@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { ToolsIcon, HtmlIcon, CssIcon, JavascriptIcon, ReactIcon, TailwindcssIcon, MongodbIcon, MysqlIcon, GitIcon, GithubToolIcon, NodejsIcon, ExpressIcon } from '../components/Icons'
-import '../css/DevelopmentTools.css'
 
 const DEVELOPMENT_TOOLS = [
     {
@@ -30,28 +29,11 @@ export function DevelopmentTools () {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <section id="development_tools" className="development_tools__container">
-            <h1>
+        <section className="flex flex-col gap-12">
+            <h1 className='flex justify-center items-center gap-6 text-4xl font-bold text-center'>
                 <ToolsIcon />
                 Herramientas
             </h1>
-            <div className="development_tools__header">
-            {
-                DEVELOPMENT_TOOLS.map((development_tool, index) => (
-                    <button 
-                        key={index}
-                        // Actualizar valor del estado con el de la ventana en la que se ha hecho click
-                        onClick={setActiveTab(index)}
-                        // Comprobar si el valor del estado es igual que el índice que tiene el botón
-                        // cumple condición -> agregar clase "active" al botón
-                        // NO cumple condición -> no agregar ninguna clase al botón
-                        className={activeTab === index ? 'active' : ''}
-                        >
-                        {development_tool.title}
-                    </button>
-                ))
-            }
-            </div>
             <div className="development_tools__technologies">
             {
                 // Mostrar tecnologías de la categoría correspondiente

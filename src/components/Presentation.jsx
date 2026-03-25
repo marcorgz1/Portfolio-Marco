@@ -11,15 +11,15 @@ export function Presentation() {
     const [hovered, setHovered] = useState(false);
 
     return (
-        <section id='presentation' className='presentation'>
-            <img src={avatar2} alt="Avatar" className='presentation_image' />
-            <div className='personal_info'>
+        <section id='presentation' className='flex justify-center items-center gap-12 mt-16'>
+            <img src={avatar2} alt="Avatar" />
+            <div className='flex flex-col gap-6 mt-4'>
                 <h1 className='welcome_text'>
                     Hola, soy Marco
                 </h1>
-                <div className="description">
-                    <span>Junior Frontend Developer</span>
-                    <p>
+                <div className="flex flex-col gap-6">
+                    <h3 className='font-bold text-xl'>Junior Frontend Developer</h3>
+                    <p className='text-sm text-balance'>
                         Desarrollador Web Full Stack apasionado en crear webs innovadoras
                         y únicas haciendo uso de diversas tecnologías. Siempre con ganas de aprender
                         nuevas tecnologías. Siempre intentando desarrollar aplicaciones web mantenibles y escalables,
@@ -35,7 +35,7 @@ export function Presentation() {
                         Disponible
                     </button>
                 </div>
-                <div className='presentation_social_buttons'>
+                <div className='flex items-center gap-10'>
                     <a href='https://github.com/marcorgz1?tab=repositories' target='_blank' rel='noopener noreferrer' className="social_button">
                         <UseAnimations animation={github} size={32} strokeColor='white' />
                         <span>Github</span>

@@ -1,5 +1,3 @@
-import '../css/Navbar.css'
-
 export function Navbar() {
     const NAV_SECTIONS = [
         {
@@ -38,14 +36,15 @@ export function Navbar() {
     }
 
     return (
-        <nav className='navbar'>
-            <ul className='navbar_sections'>
+        <nav className='flex items-center'>
+            <ul className='flex items-center gap-24 font-semibold'>
                 {
                     NAV_SECTIONS.map((section) => (
                         <li key={section.id}>
                             <a 
                                 href={section.url}
                                 onClick={(e) => scrollToSection(e, section.url)}
+                                className="decoration-0 hover:text-purple-300 transition-colors"
                             >
                                 {section.title}
                             </a>

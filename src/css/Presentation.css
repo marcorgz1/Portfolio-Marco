@@ -50,6 +50,7 @@
     display: inline-flex;
     align-items: center;
     margin-top: 1.5rem;
+    margin-bottom: 2rem;
     font-family: 'Syne', sans-serif;
 }
 
@@ -151,13 +152,6 @@
 }
 
 /* --- SOCIAL BUTTONS --- */
-
-.presentation_social_buttons {
-    display: flex;
-    align-items: center;
-    gap: 2.8em;
-    margin-top: 24px;
-}
 
 .social_button {
     display: flex;
