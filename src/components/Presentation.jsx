@@ -11,27 +11,26 @@ export function Presentation() {
     const [hovered, setHovered] = useState(false);
 
     return (
-        <section id='presentation' className='flex justify-center items-center gap-12 mt-16'>
-            <img src={avatar2} alt="Avatar" />
-            <div className='flex flex-col gap-6 mt-4'>
-                <h1 className='welcome_text'>
-                    Hola, soy Marco
-                </h1>
-                <div className="flex flex-col gap-6">
-                    <h3 className='font-bold text-xl'>Junior Frontend Developer</h3>
-                    <p className='text-sm text-balance'>
-                        Desarrollador Web Full Stack apasionado en crear webs innovadoras
-                        y únicas haciendo uso de diversas tecnologías. Siempre con ganas de aprender
-                        nuevas tecnologías. Siempre intentando desarrollar aplicaciones web mantenibles y escalables,
-                        haciendo un gran esfuerzo en el desarrollo y la experiencia del usuario en las mismas.
+        <section id='presentation' className='flex justify-center items-center gap-12 w-full mt-16'>
+            <div className='flex flex-col justify-center items-center gap-6'>
+                <div className='flex justify-center items-center gap-6 mb-8'>
+                    <h1 className='welcome_text'>Hola! Soy Marco</h1>
+                    <span className='text-5xl'>👋</span>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-6 max-w-2xl mb-4">
+                    <h3 className='font-bold text-2xl'>Junior Full Stack Developer</h3>
+                    <p className='text-md text-center text-wrap'>
+                        Soy un <b>Desarrollador Web Full Stack</b> apasionado en crear webs innovadoras
+                        y únicas. Enfocado en aplicaciones mantenibles, escalables y con gran 
+                        experiencia de usuario.
                     </p>
                 </div>
-                <div className='gradient_button'>
+                <div>
                     <button
                         onMouseEnter={() => setHovered(true)}
                         onMouseLeave={() => setHovered(false)}                        
                     >
-                        <span className='status_dot' />
+                        <span className='w-2 h-2' />
                         Disponible
                     </button>
                 </div>

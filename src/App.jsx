@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <main>
+      <main className='w-full'>
         <Header />
         <Presentation />
         <Studies />
