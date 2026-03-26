@@ -1,6 +1,5 @@
 import 'leaflet/dist/leaflet.css'
-import '../css/Contact.css'
-import { GithubIcon, LinkedinContactIcon, MailIcon, MapIcon } from './Icons'
+import { ContactIcon, GithubIcon, LinkedinContactIcon, MailIcon, MapIcon } from './Icons'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 export function Contact() {
@@ -28,13 +27,16 @@ export function Contact() {
     ]
 
     return (
-        <section className="contact">
-            <h2>Contáctame</h2>
-            <p>
+        <section id="contact" className="flex flex-col justify-center items-center gap-16 mt-20">
+            <h2 className='flex gap-6 items-center text-4xl font-bold'>
+                <ContactIcon />
+                Contáctame
+            </h2>
+            <p className="text-md font-semibold">
                 ¿Estás buscando a alguien con quién colaborar en algún proyecto? 
                 No dudes en ponerte en contacto conmigo.
             </p>
-            <div id="contact" className="contact_container">                    
+            <div className="flex justify-center items-center gap-12">
                 <div className="contact_social_links">
                 {
                     SOCIAL_LINKS.map((social_link) => {

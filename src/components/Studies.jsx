@@ -21,7 +21,7 @@ export function Studies () {
         }
     ]
     return (
-        <section className='flex flex-col justify-center items-center gap-6 mt-24'>
+        <section id='studies' className='flex flex-col justify-center items-center gap-6 mt-24'>
             <div className='flex justify-center items-center gap-6 text-4xl font-bold mb-12'>
                 <SchoolIcon />
                 <h1>Estudios</h1>
