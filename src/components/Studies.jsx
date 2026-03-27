@@ -23,7 +23,9 @@ export function Studies () {
     return (
         <section id='studies' className='flex flex-col justify-center items-center gap-6 mt-24'>
             <div className='flex justify-center items-center gap-6 text-4xl font-bold mb-12'>
-                <SchoolIcon />
+                <span className='text-[#cba6f7]'>
+                    <SchoolIcon />
+                </span>
                 <h1>Estudios</h1>
             </div>
             <ul className='flex flex-col justify-center items-center gap-16 px-6 md:px-12 max-w-5xl'>

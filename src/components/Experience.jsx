@@ -1,8 +1,6 @@
 import { ExperienceCard } from "./ExperienceCard"
 import { ExperienceIcon } from "./Icons"
 
-import '../css/Experience.css'
-
 export function Experience () {
     const EXPERIENCES = [
         {
@@ -29,27 +27,29 @@ export function Experience () {
 
     return (
         <>
-            <div id="experience" className="experiences">
-                <div className="experiences_title">
-                    <ExperienceIcon />
-                    <h2>Experiencia</h2>
+            <div id="experience" className="py-16 px-4 max-w-2xl mx-auto">
+                <div className="flex justify-center items-center gap-6 text-4xl font-bold mb-20">
+                    <span className="text-[#cba6f7]">
+                        <ExperienceIcon />
+                    </span>
+                    <h2>
+                        Experiencia
+                    </h2>                
                 </div>
-                <ul className="experiences_container">
+                <div className="flex flex-col justify-center items-center gap-12">
                 {
                     EXPERIENCES.map((experience, index) => (
-                        <li key={index} className="experience_card">
-                            <ExperienceCard 
-                                key={index} 
-                                title={experience.title} 
-                                company={experience.company} 
-                                year={experience.year}
-                                description={experience.description} 
-                                technologies={experience?.technologies}
-                            />
-                        </li>
+                        <ExperienceCard 
+                            key={index} 
+                            title={experience.title} 
+                            company={experience.company} 
+                            year={experience.year}
+                            description={experience.description} 
+                            technologies={experience?.technologies}
+                        />
                     ))
                 }
-                </ul>
+                </div>
             </div>
         </>
     )
