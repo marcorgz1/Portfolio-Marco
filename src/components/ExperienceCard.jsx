@@ -3,7 +3,8 @@ import { CalendarIcon } from './Icons'
 
 export function ExperienceCard ({ title, company, year, description, technologies }) {
     return (
-        <div className="relative group">
+        // Perrmitir a las cards ocupar todo el ancho disponible omitiendo el ancho establecido por el posicionamiento flex contenedor padre
+        <div className="relative group w-full">
             {/* Connector line */}
             <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-[#cba6f7] via-[#cba6f7]/30 to-transparent" />
  
@@ -12,7 +13,7 @@ export function ExperienceCard ({ title, company, year, description, technologie
  
             {/* Card */}
             <div 
-                className="flex flex-col gap-4 ml-16 mb-10 rounded-2xl p-6 border border-white/5 transition-all duration-300 group-hover:border-[#cba6f7]/20 group-hover:-translate-y-0.5 group-hover:scale-105"
+                className="flex flex-col gap-4 w-full ml-16 mb-10 rounded-2xl p-6 border border-white/5 transition-all duration-300 group-hover:border-[#cba6f7]/20 group-hover:-translate-y-0.5 group-hover:scale-105"
                 style={{
                     background: 'rgba(30, 30, 46, 0.6)',
                     backdropFilter: 'blur(12px)',
@@ -20,9 +21,7 @@ export function ExperienceCard ({ title, company, year, description, technologie
                 }}
             >
                 <div className="flex flex-wrap items-start justify-between gap-2 mb-1">
-                    <h3
-                        className="text-[#cdd6f4] text-lg leading-snug max-w-96"
-                    >
+                    <h3 className="text-[#cdd6f4] text-lg leading-snug">
                         {title}
                     </h3>
  

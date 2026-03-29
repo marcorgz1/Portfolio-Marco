@@ -1,32 +1,25 @@
-import { useState } from 'react';
 import { ToolsIcon, HtmlIcon, CssIcon, JavascriptIcon, ReactIcon, TailwindcssIcon, MongodbIcon, MysqlIcon, GitIcon, GithubToolIcon, NodejsIcon, ExpressIcon } from '../components/Icons'
 
 const DEVELOPMENT_TOOLS = [
     {
         title: 'Frontend',
-        technologies: [HtmlIcon, CssIcon, JavascriptIcon, ReactIcon, TailwindcssIcon]
+        technologies: ['HTML', 'CSS', 'Javascript', 'React', 'Tailwind CSS']
     },
     {
         title: 'Backend',
-        technologies: [NodejsIcon, ExpressIcon]
+        technologies: ['Node.js', 'Express']
     },
     {
         title: 'Bases de datos',
-        technologies: [MongodbIcon, MysqlIcon]
+        technologies: ['MySQL', 'MongoDB']
     },
     {
         title: 'Otras herramientas',
-        technologies: [GitIcon, GithubToolIcon]
+        technologies: ['Git', 'Github', 'Postman', 'Figma', 'Linux']
     },
 ]
 
 export function DevelopmentTools () {
-    // Estado para guardar la ventana en la que nos encontramos
-    // 0 = Frontend (se muestra por defecto)
-    // 1 = Backend
-    // 2 = Bases de datos
-    // 3 = Otras
-    const [activeTab, setActiveTab] = useState(0);
 
     return (
         <section className="flex flex-col gap-12">
@@ -34,16 +27,31 @@ export function DevelopmentTools () {
                 <ToolsIcon />
                 Herramientas
             </h1>
-            <div className="development_tools__technologies">
+            <div className='grid grid-cols-2 gap-16'>
             {
-                // Mostrar tecnologías de la categoría correspondiente
-                // DEVELOPMENT_TOOLS[0] -> tecnologías frontend
-                // DEVELOPMENT_TOOLS[1] -> tecnologías backend
-                // ...
-                DEVELOPMENT_TOOLS[activeTab].technologies.map((Technology, index) => (
-                    <span className='development_tool__technology' key={index}>
-                        <Technology />
-                    </span>
+                DEVELOPMENT_TOOLS.map((development_tool, index) => (
+                    <div 
+                        key={index} 
+                        className='flex flex-col items-center gap-8 border-purple-800/30 px-12 py-8 rounded-xl border-1 hover:border-[#cba6f7]/40 transition-all duration-300 hover:transform hover:scale-105'
+                        style={{
+                            background: 'rgba(30, 30, 46, 0.6)',
+                            backdropFilter: 'blur(12px)',
+                            boxShadow: '0 4px 24px rgba(0,0,0,0.3)',
+                        }}
+                    >
+                        <h3 className='text-2xl font-semibold'>{development_tool.title}</h3>
+                        <div className='flex items-center gap-4'>
+                        {
+                            development_tool.technologies.map((technology, index) => (
+                                    <span                                    
+                                        key={index}
+                                        className="px-3 py-1 bg-purple-900/40 text-purple-300 rounded-full text-sm border border-purple-700/30">
+                                            {technology}
+                                    </span>
+                            ))
+                        }
+                        </div>
+                    </div>
                 ))
             }
             </div>

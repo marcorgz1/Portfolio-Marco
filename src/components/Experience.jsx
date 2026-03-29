@@ -27,7 +27,7 @@ export function Experience () {
 
     return (
         <>
-            <div id="experience" className="py-16 px-4 max-w-2xl mx-auto">
+            <div id="experience" className="flex flex-col justify-center items-center py-24">
                 <div className="flex justify-center items-center gap-6 text-4xl font-bold mb-20">
                     <span className="text-[#cba6f7]">
                         <ExperienceIcon />

@@ -25,12 +25,12 @@ const PROJECTS = [
 
 export function Projects() {
     return (
-        <section id="projects" className='projects'>
-            <div className="projects_title__container">
+        <section id="projects" className='flex flex-col justify-center items-center py-16'>
+            <div className="flex justify-center items-center gap-4 py-20">
                 <ToolsIcon />
-                <h1 className='projects_title'>Proyectos</h1>
+                <h1 className='text-4xl font-bold'>Proyectos</h1>
             </div>
-            <div className='projects_container'>
+            <div className='flex justify-center items-center gap-32'>
             {
                 PROJECTS.map((project, index) => (
                     <div key={index}>
