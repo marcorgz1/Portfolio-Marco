@@ -30,7 +30,7 @@ export function Projects() {
                 <ToolsIcon />
                 <h1 className='text-4xl font-bold'>Proyectos</h1>
             </div>
-            <div className='flex justify-center items-center gap-32'>
+            <div className='flex justify-center items-center gap-32 py-8'>
             {
                 PROJECTS.map((project, index) => (
                     <div key={index}>
