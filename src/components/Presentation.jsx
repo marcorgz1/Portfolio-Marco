@@ -1,18 +1,56 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import UseAnimations from 'react-useanimations';
 import { github, linkedin, download } from './animatedIcons';
 import my_CV from '../assets/My-CV-Harvard.pdf';
-import StatusBadge from './StatusBadge'
+import StatusBadge from './StatusBadge';
 
 export function Presentation() {
-    const [hovered, setHovered] = useState(false);
+    const [displayedText, setDisplayedText] = useState('');
+    const [isDeleting, setIsDeleting] = useState(false);
+
+    
+    // const titles = [
+        
+    //     "Frontend Developer",
+    //     "Backend Developer"
+    // ]
+
+    // Efecto de máquina de escribir
+    useEffect(() => {
+        const title = "Junior Full Stack Developer";
+        const typingSpeed = isDeleting ? 50 : 120;
+        const pauseTime = isDeleting ? 500 : 2000;
+
+        if (!isDeleting && displayedText === title) {
+        const timeout = setTimeout(() => setIsDeleting(true), pauseTime);
+        return () => clearTimeout(timeout);
+        }
+
+        if (isDeleting && displayedText === '') {
+        setIsDeleting(false);
+        // setTitleIndex((prev) => (prev + 1) % titles.length);
+        return;
+        }
+
+        const timeout = setTimeout(() => {
+        setDisplayedText(prev => {
+            if (isDeleting) {
+            return title.substring(0, prev.length - 1);
+            } else {
+            return title.substring(0, prev.length + 1);
+            }
+        });
+        }, typingSpeed);
+
+        return () => clearTimeout(timeout);
+    }, [displayedText, isDeleting]);
 
     return (
         <section id='presentation' className='flex justify-center items-center gap-12 w-full mt-32'>
             <div className='flex flex-col justify-center items-center gap-6'>
                 <div className='flex flex-col justify-center items-center gap-4 mb-8'>
                     <h2 className='text-4xl font-bold leading-relaxed'>Marco Rodriguez 👋</h2>
-                    <h1 className='text-purple-300 font-bold text-6xl leading-relaxed'>Junior Full Stack Developer</h1>
+                    <h1 id='typewriter' className='text-purple-300 text-6xl font-bold'>{displayedText}</h1>
                 </div>
                 <div className="flex flex-col justify-center items-center gap-6 max-w-2xl mb-12">
                     <p className='text-md text-center text-wrap'>

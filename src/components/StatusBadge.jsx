@@ -7,8 +7,18 @@ function StatusBadge () {
             text-[#a6e3a1] text-sm font-medium
             backdrop-blur-sm
             hover:bg-[#a6e3a1]/20
-            cursor-pointer
-            transition-colors duration-300">
+            cursor-pointer duration-300"
+            animate={{ 
+                y: [0, -12, 0]
+            }}
+            transition={{
+                y: {
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                }
+            }}
+        >
 
             <span className="bottom-1 right-1
                 w-2 h-2 rounded-full bg-[#a6e3a1]
