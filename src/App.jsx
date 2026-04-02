@@ -6,6 +6,7 @@ import { Studies } from './components/Studies';
 import { Contact } from './components/Contact';
 import { Experience } from './components/Experience';
 import { Footer } from './components/Footer';
+import { SectionReveal } from './components/SectionReveal';
 
 function App() {
 
@@ -13,12 +14,39 @@ function App() {
     <>
       <main className='w-full'>
         <Header />
-        <Presentation />
-        <Studies />
-        <Experience />
-        <DevelopmentTools />
-        <Projects />
-        <Contact />
+        <SectionReveal duration={800}>
+          <Presentation />
+        </SectionReveal>
+        <SectionReveal
+          direction='left'
+          delay={100} 
+          duration={800}>
+          <Studies />
+        </SectionReveal>
+        <SectionReveal
+          delay={80}
+          duration={800}
+        >
+          <Experience />
+        </SectionReveal>
+        <SectionReveal
+          direction='right'
+          delay={200}
+          duration={800}>
+          <DevelopmentTools />
+        </SectionReveal>
+        <SectionReveal
+          delay={200}
+          duration={800}>
+          <Projects />
+        </SectionReveal>
+        <SectionReveal
+          direction='left'
+          distance={50}
+          delay={100}
+          duration={800}>
+          <Contact />
+        </SectionReveal>
         <Footer />
       </main>
     </>
