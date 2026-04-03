@@ -46,11 +46,11 @@ export function Presentation() {
     }, [displayedText, isDeleting]);
 
     return (
-        <section id='presentation' className='flex justify-center items-center gap-12 w-full mt-32'>
+        <section id='presentation' className='flex justify-center items-center gap-12 w-full mt-32 sm:mt-24 md:mt-32 px-4 sm:px-8'>
             <div className='flex flex-col justify-center items-center gap-6'>
                 <div className='flex flex-col justify-center items-center gap-4 mb-8'>
-                    <h2 className='text-4xl font-bold leading-relaxed'>Marco Rodriguez 👋</h2>
-                    <h1 id='typewriter' className='text-purple-300 text-6xl font-bold'>{displayedText}</h1>
+                    <h2 className='text-3xl sm:text-4xl font-bold leading-relaxed'>Marco Rodriguez 👋</h2>
+                    <h1 id='typewriter' className='text-purple-300 text-4xl sm:text-6xl font-bold'>{displayedText}</h1>
                 </div>
                 <div className="flex flex-col justify-center items-center gap-6 max-w-2xl mb-12">
                     <p className='text-md text-center text-wrap'>
