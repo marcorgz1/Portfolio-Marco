@@ -17,7 +17,7 @@ export function ProjectCard({ title, description, image, technologies, github, u
             {
                 technologies.map((technology, index) => (
                     <div key={index}>
-                        <span className="px-3 py-1 bg-purple-900/40 text-purple-300 rounded-full text-sm border border-purple-700/30">{technology}</span>
+                        <span className="px-3 py-1 bg-purple-950/60 text-purple-200 rounded-full text-sm font-medium border border-purple-700/30">{technology}</span>
                     </div>
                 ))
             }
@@ -36,7 +36,17 @@ export function ProjectCard({ title, description, image, technologies, github, u
                             <a href={github} target='_blank'>GitHub</a>
                         </button>
                     ) : (
-                        <span disabled>❌ Código no disponible</span>
+                        <span
+                            className='py-2 px-4 rounded-lg'
+                            style={{
+                                background: 'rgba(30, 30, 46, 0.6)',
+                                backdropFilter: 'blur(12px)',
+                                boxShadow: '0 4px 24px rgba(0,0,0,0.3)'
+                            }}
+                            disabled
+                        >
+                            ❌ Código no disponible
+                        </span>
                     )
                 }
                 
@@ -53,7 +63,17 @@ export function ProjectCard({ title, description, image, technologies, github, u
                             <a href={url} target='_blank'>Demo</a>
                         </button>
                     ) : (
-                        <span disabled>❌ Demo no disponible</span>
+                        <span
+                            className='py-2 px-4 rounded-lg'
+                            style={{
+                                background: 'rgba(30, 30, 46, 0.6)',
+                                backdropFilter: 'blur(12px)',
+                                boxShadow: '0 4px 24px rgba(0,0,0,0.3)'
+                            }} 
+                            disabled
+                        >
+                            ❌ Demo no disponible
+                        </span>
                     )
                 }
             </div>

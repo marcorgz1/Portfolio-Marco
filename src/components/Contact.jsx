@@ -10,15 +10,15 @@ export function Contact() {
     const SOCIAL_LINKS = [
         {
             id: 1,
-            icon: <UseAnimations animation={github} size={32} strokeColor='white' />,
+            icon: <UseAnimations animation={linkedin} size={32} strokeColor='white' />,
             name: 'Marco Rodriguez-Rey',
             link: 'https://www.linkedin.com/in/marco-rodriguez-rey-b082361b9/'
         },
         {
             id: 2,
-            icon: <UseAnimations animation={linkedin} size={32} strokeColor='white' />,
+            icon: <UseAnimations animation={github} size={32} strokeColor='white' />,
             name: 'marcorgz1',
-            link: 'https://github.com/marcorgz1?tab=repositories'
+            link: 'https://github.com/marcorgz1'
         },
         {
             id: 3,
@@ -29,7 +29,7 @@ export function Contact() {
     ]
 
     return (
-        <section id="contact" className="flex flex-col justify-center items-center gap-16 mt-20">
+        <section id="contact" className="flex flex-col justify-center items-center gap-16 mt-20 border-b-2 py-32 border-b-white/15">
             <h2 className='flex gap-6 items-center text-4xl font-bold'>
                 <ContactIcon />
                 Contáctame
@@ -69,6 +69,6 @@ export function Contact() {
                     </MapContainer>
                 </div>
             </div>
-        </section >
+        </section>
     )
 }

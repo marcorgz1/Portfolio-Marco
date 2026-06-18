@@ -29,7 +29,7 @@ export function Navbar () {
 
     return (
         <nav>
-            <ul className='flex justify-center items-center py-4 gap-24 font-semibold'>
+            <ul className='flex justify-center items-center py-4 gap-8 font-semibold'>
             {
                 NAV_SECTIONS.map((section) => (
                     <li 
@@ -37,7 +37,7 @@ export function Navbar () {
                     >
                         <a 
                             href={section.url}
-                            className="hover:underline hover:decoration-violet-400 hover:cursor-pointer"
+                            className="transition-colors hover:text-violet-300 hover:cursor-pointer"
                         >
                             {section.title}
                         </a>
