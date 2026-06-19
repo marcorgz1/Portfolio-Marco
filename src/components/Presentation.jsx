@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import UseAnimations from 'react-useanimations';
-import { github, linkedin, download } from './animatedIcons';
-import my_CV from '../assets/My-CV-Harvard.pdf';
+import { MailIcon } from './Icons.jsx'
+import cv from '../assets/cv_2.pdf';
+import photo from '../assets/avatar2.png'
 import StatusBadge from './StatusBadge';
 
 export function Presentation() {
@@ -46,7 +47,7 @@ export function Presentation() {
     }, [displayedText, isDeleting]);
 
     return (
-        <section id='presentation' className='flex justify-center items-center gap-12 w-full mt-32 scroll-mt-32'>
+        <section id='presentation' className='flex justify-between items-center w-full mt-32 scroll-mt-32'>
             <div className='flex flex-col justify-center items-center gap-6'>
                 <div className='flex flex-col justify-center items-center gap-4 mb-8'>
                     <h2 className='text-4xl font-bold leading-relaxed'>Marco Rodriguez 👋</h2>
@@ -61,38 +62,29 @@ export function Presentation() {
                 </div>
                 <StatusBadge />
                 <div className='flex items-center gap-16 py-16'>
-                    <a href={my_CV} download={'CV.pdf'} target='_blank' rel='noopener noreferrer' 
-                        className="flex items-center gap-4 font-semibold py-2 px-4 rounded-full border border-white/5 hover:border-purple-400/60 cursor-pointer hover:scale-105 transition-all duration-300"
-                        style={{
-                            background: 'rgba(30, 30, 46, 0.6)',
-                            backdropFilter: 'blur(12px)',
-                            boxShadow: '0 4px 24px rgba(0,0,0,0.3)'
-                        }}
-                    >
-                        <UseAnimations animation={download} size={32} strokeColor='white' />
-                        <span>Descargar CV</span>
-                    </a>
-                    <a href='https://github.com/marcorgz1?tab=repositories' target='_blank' rel='noopener noreferrer' 
-                        className="flex items-center gap-4 font-semibold py-2 px-4 rounded-full border border-white/5 hover:border-purple-400/60 hover:scale-105 cursor-pointer transition-all duration-300"
-                        style={{
-                            background: 'rgba(30, 30, 46, 0.6)',
-                            backdropFilter: 'blur(12px)',
-                            boxShadow: '0 4px 24px rgba(0,0,0,0.3)'
-                        }}>
-                        <UseAnimations animation={github} size={32} strokeColor='white' />
-                        <span>Github</span>
-                    </a>
-                    <a href='https://www.linkedin.com/in/marco-rodriguez-rey-b082361b9/' target='_blank' rel='noopener noreferrer' 
-                        className="flex items-center gap-4 font-semibold py-2 px-4 rounded-full border border-white/5 hover:border-purple-400/60 hover:bg-neutral-800 hover:scale-105 cursor-pointer transition-all duration-300"
+                        <div className='bg-violet-300/80 py-2 px-4 rounded-lg cursor-pointer hover:bg-violet-300 hover:scale-105 hover:-translate-y-1.5 transition-all duration-300'>
+                            <a 
+                                href='#projects' 
+                                className="text-black font-semibold"
+                            >
+                                <span>Ver proyectos</span>
+                            </a>
+                        </div>
+                    <a 
+                        href='#contact'
+                        className="flex items-center gap-4 font-semibold py-2 px-4 rounded-lg border border-white/5 hover:border-violet-300/80 hover:scale-105 cursor-pointer transition-all duration-300"
                         style={{
                             background: 'rgba(30, 30, 46, 0.6)',
                             backdropFilter: 'blur(12px)',
                             boxShadow: '0 4px 24px rgba(0,0,0,0.3)'
                         }}>
-                        <UseAnimations animation={linkedin} size={32} strokeColor='white' />
-                        <span>Linkedin</span>
+                        <MailIcon />                        
+                        <span>Contáctame</span>
                     </a>
                 </div>
+            </div>
+            <div>
+                <img src={photo} alt="photo portfolio" width={400} />
             </div>
         </section>
     )

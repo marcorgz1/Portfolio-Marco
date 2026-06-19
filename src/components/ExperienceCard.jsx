@@ -13,7 +13,7 @@ export function ExperienceCard ({ title, company, year, description, technologie
  
             {/* Card */}
             <div 
-                className="flex flex-col gap-4 w-full ml-16 mb-10 rounded-2xl p-6 border border-white/5 transition-all duration-300 group-hover:border-[#cba6f7]/20 group-hover:-translate-y-0.5 group-hover:scale-105"
+                className="flex flex-col gap-4 w-full ml-16 mb-10 rounded-2xl p-6 border border-white/5 transition-all duration-300 group-hover:border-violet-300/80 group-hover:scale-105"
                 style={{
                     background: 'rgba(30, 30, 46, 0.6)',
                     backdropFilter: 'blur(12px)',
@@ -21,7 +21,7 @@ export function ExperienceCard ({ title, company, year, description, technologie
                 }}
             >
                 <div className="flex flex-wrap items-start justify-between gap-2 mb-1">
-                    <h3 className="text-[#cdd6f4] text-lg leading-snug">
+                    <h3 className="text-[#cdd6f4] text-lg font-semibold leading-snug">
                         {title}
                     </h3>
  
@@ -33,7 +33,7 @@ export function ExperienceCard ({ title, company, year, description, technologie
                 </div>
  
                 {/* Company */}
-                <p className="text-sm font-semibold text-[#b4befe] mb-3" style={{ fontFamily: '"DM Sans", sans-serif' }}>
+                <p className="text-sm font-medium text-[#b4befe] mb-3" style={{ fontFamily: '"DM Sans", sans-serif' }}>
                     {company}
                 </p>
  

@@ -3,7 +3,7 @@ import '../css/ProjectCard.css'
 export function ProjectCard({ title, description, image, technologies, github, url }) {
     return (
         <section 
-            className="flex flex-col justify-center items-center gap-8 max-w-2xl border-purple-800/30 px-12 py-8 rounded-xl border-1 hover:border-[#cba6f7]/40 transition-all duration-300 hover:transform hover:scale-105"
+            className="flex flex-col justify-center items-center gap-8 max-w-2xl border-purple-800/30 px-12 py-8 rounded-xl border-1 hover:border-violet-300/80 transition-all duration-300 hover:transform hover:scale-105"
             style={{
                 background: 'rgba(30, 30, 46, 0.6)',
                 backdropFilter: 'blur(12px)',

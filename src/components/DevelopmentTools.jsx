@@ -42,7 +42,7 @@ export function DevelopmentTools () {
                 DEVELOPMENT_TOOLS.map((development_tool, index) => (
                     <div 
                         key={index} 
-                        className='flex flex-col items-center gap-12 w-full border-purple-800/30 py-8 rounded-xl border-1 hover:border-[#cba6f7]/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-[0_0_32px_rgba(168,85,247,0.18)]'
+                        className='flex flex-col items-center gap-12 w-full border-purple-800/30 py-8 rounded-xl border-1 hover:border-violet-300/80 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-[0_0_32px_rgba(168,85,247,0.18)]'
                         style={{
                             background: 'rgba(30, 30, 46, 0.6)',
                             backdropFilter: 'blur(12px)',
