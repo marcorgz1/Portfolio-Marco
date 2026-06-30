@@ -1325,8 +1325,8 @@ packages:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
 
-  lottie-web@5.12.2:
-    resolution: {integrity: sha512-uvhvYPC8kGPjXT3MyKMrL3JitEAmDMp30lVkuq/590Mw9ok6pWcFCwXJveo0t5uqYw1UREQHofD+jVpdjBv8wg==}
+  lottie-web@5.13.0:
+    resolution: {integrity: sha512-+gfBXl6sxXMPe8tKQm7qzLnUy5DUPJPKIyRHwtpCpyUEYjHYRJC/5gjUvdkuO2c3JllrPtHXH5UJJK8LRYl5yQ==}
 
   lucide-react@0.482.0:
     resolution: {integrity: sha512-XM8PzHzSrg8ATmmO+fzf+JyYlVVdQnJjuyLDj2p4V2zEtcKeBNAqAoJIGFv1x2HSBa7kT8gpYUxwdQ0g7nypfw==}
@@ -2760,7 +2760,7 @@ snapshots:
     dependencies:
       js-tokens: 4.0.0
 
-  lottie-web@5.12.2: {}
+  lottie-web@5.13.0: {}
 
   lucide-react@0.482.0(react@19.0.0):
     dependencies:
@@ -2930,7 +2930,7 @@ snapshots:
 
   react-useanimations@2.10.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
-      lottie-web: 5.12.2
+      lottie-web: 5.13.0
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 

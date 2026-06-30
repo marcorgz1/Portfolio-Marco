@@ -1,6 +1,6 @@
-import '../css/Studies.css'
-import { SchoolIcon } from './Icons'
-import { StudyCard } from './StudyCard'
+import '../css/Studies.css';
+import { SchoolIcon } from './Icons.jsx';
+import { StudyCard } from './StudyCard.jsx';
 
 export function Studies () {
     const STUDIES = [
@@ -21,7 +21,7 @@ export function Studies () {
         }
     ]
     return (
-        <section id='studies' className='flex flex-col justify-center items-center gap-6 py-28'>
+        <section id='studies' className='flex flex-col justify-center items-center gap-6 mb-32'>
             <div className='flex justify-center items-center gap-6 text-4xl font-bold mb-12'>
                 <span className='text-[#cba6f7]'>
                     <SchoolIcon />

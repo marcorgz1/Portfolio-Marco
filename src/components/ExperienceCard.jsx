@@ -1,19 +1,17 @@
-import '../css/Experience.css'
-import { CalendarIcon } from './Icons'
+import '../css/Experience.css';
+import { CalendarIcon } from './Icons.jsx';
+import Timeline from './Timeline.jsx';
 
 export function ExperienceCard ({ title, company, year, description, technologies }) {
     return (
         // Perrmitir a las cards ocupar todo el ancho disponible omitiendo el ancho establecido por el posicionamiento flex contenedor padre
-        <div className="relative group w-full">
-            {/* Connector line */}
-            <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-[#cba6f7] via-[#cba6f7]/30 to-transparent" />
- 
-            {/* Timeline dot */}
-            <div className="absolute -left-[5px] top-6 w-[11px] h-[11px] rounded-full bg-[#cba6f7] shadow-[0_0_12px_2px_rgba(203,166,247,0.5)] group-hover:shadow-[0_0_18px_4px_rgba(203,166,247,0.7)] transition-shadow duration-300" />
- 
+        <div className="relative group">
+            {/* Timeline */}
+            <Timeline />
+
             {/* Card */}
             <div 
-                className="flex flex-col gap-4 w-full ml-16 mb-10 rounded-2xl p-6 border border-white/5 transition-all duration-300 group-hover:border-violet-300/80 group-hover:scale-105"
+                className="flex flex-col gap-2 max-w-xl md:max-w-2xl ml-16 mb-10 rounded-2xl px-8 py-6 border border-white/5 transition-all duration-300 group-hover:border-violet-300/80 group-hover:scale-105"
                 style={{
                     background: 'rgba(30, 30, 46, 0.6)',
                     backdropFilter: 'blur(12px)',
@@ -24,24 +22,24 @@ export function ExperienceCard ({ title, company, year, description, technologie
                     <h3 className="text-[#cdd6f4] text-lg font-semibold leading-snug">
                         {title}
                     </h3>
- 
+
                     {/* Year badge */}
                     <span className="flex items-center gap-1.5 text-xs text-[#cba6f7] bg-[#cba6f7]/10 border border-[#cba6f7]/20 px-2.5 py-1 rounded-full whitespace-nowrap" style={{ fontFamily: '"DM Sans", sans-serif' }}>
                         <CalendarIcon className="w-3 h-3" />
                         {year}
                     </span>
                 </div>
- 
+
                 {/* Company */}
                 <p className="text-sm font-medium text-[#b4befe] mb-3" style={{ fontFamily: '"DM Sans", sans-serif' }}>
                     {company}
                 </p>
- 
+
                 {/* Description */}
-                <p className="text-sm text-[#a6adc8] text-balance leading-relaxed mb-4" style={{ fontFamily: '"DM Sans", sans-serif' }}>
+                <p className="text-sm text-[#a6adc8] line-clamp-3 mb-4" style={{ fontFamily: '"DM Sans", sans-serif' }}>
                     {description}
                 </p>
- 
+
                 {/* Tech pills */}
                 {technologies && (
                     <ul className="flex flex-wrap gap-2">

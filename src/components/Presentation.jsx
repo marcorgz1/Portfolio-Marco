@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
-import UseAnimations from 'react-useanimations';
-import { MailIcon } from './Icons.jsx'
-import cv from '../assets/cv_2.pdf';
+import { MailIcon } from './Icons.jsx';
 import photo from '../assets/avatar2.png'
 import StatusBadge from './StatusBadge';
 
@@ -18,7 +16,7 @@ export function Presentation() {
 
     // Efecto de máquina de escribir
     useEffect(() => {
-        const title = "Junior Full Stack Developer";
+        const title = "Junior Frontend Developer";
         const typingSpeed = isDeleting ? 50 : 120;
         const pauseTime = isDeleting ? 500 : 2000;
 
@@ -47,15 +45,22 @@ export function Presentation() {
     }, [displayedText, isDeleting]);
 
     return (
-        <section id='presentation' className='flex justify-between items-center w-full mt-32 scroll-mt-32'>
+        <section 
+            id='presentation' 
+            className='flex flex-col-reverse md:flex-row justify-center items-center w-full mt-20 md:mt-32 px-4 md:px-0 gap-8 scroll-mt-32'>
             <div className='flex flex-col justify-center items-center gap-6'>
-                <div className='flex flex-col justify-center items-center gap-4 mb-8'>
+                <div className='flex flex-col justify-center items-center md:gap-4 mb-4 md:mb-8'>
                     <h2 className='text-4xl font-bold leading-relaxed'>Marco Rodriguez 👋</h2>
-                    <h1 id='typewriter' className='text-purple-300 text-6xl font-bold'>{displayedText}</h1>
+                    <h1 
+                        id='typewriter' 
+                        className='text-purple-300 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center'
+                    >
+                        {displayedText}
+                    </h1>
                 </div>
                 <div className="flex flex-col justify-center items-center gap-6 max-w-2xl mb-12">
-                    <p className='text-md text-center text-wrap'>
-                        Soy un <b>Desarrollador Web Full Stack</b> apasionado en crear webs innovadoras
+                    <p className='text-sm md:text-md text-center text-wrap'>
+                        Soy un <b>Desarrollador Web Frontend</b> apasionado en crear webs innovadoras
                         y únicas. Enfocado en aplicaciones mantenibles, escalables y con gran 
                         experiencia de usuario.
                     </p>

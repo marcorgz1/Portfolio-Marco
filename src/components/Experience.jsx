@@ -4,7 +4,7 @@ import { ExperienceIcon } from "./Icons"
 export function Experience () {
     const EXPERIENCES = [
         {
-            title: 'Prácticas como técnico de reparación de dispositivos Apple',
+            title: 'Prácticas técnico informático Apple',
             company: 'Rosellimac',
             year: '2022',
             description: 'Reparación y mantenimiento de dispositivos Apple (iphones, macbooks, Imacs etc.)'
@@ -27,7 +27,7 @@ export function Experience () {
 
     return (
         <>
-            <div id="experience" className="flex flex-col justify-center items-center py-12">
+            <div id="experience" className="flex flex-col justify-center items-center mb-32">
                 <div className="flex justify-center items-center gap-6 text-4xl font-bold mb-20">
                     <span className="text-[#cba6f7]">
                         <ExperienceIcon />
@@ -36,7 +36,7 @@ export function Experience () {
                         Experiencia
                     </h2>                
                 </div>
-                <div className="flex flex-col justify-center items-center gap-12">
+                <div className="flex flex-col justify-center items-center gap-14 max-w-xl">
                 {
                     EXPERIENCES.map((experience, index) => (
                         <ExperienceCard 
