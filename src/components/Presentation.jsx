@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { MailIcon } from './Icons.jsx';
+import { MailIcon, DownloadIcon } from './Icons.jsx';
 import photo from '../assets/avatar2.png'
 import StatusBadge from './StatusBadge';
 
@@ -66,18 +66,30 @@ export function Presentation() {
                     </p>
                 </div>
                 <StatusBadge />
-                <div className='flex items-center gap-16 py-16'>
-                        <div className='bg-violet-300/80 py-2 px-4 rounded-lg cursor-pointer hover:bg-violet-300 hover:scale-105 hover:-translate-y-1.5 transition-all duration-300'>
-                            <a 
-                                href='#projects' 
-                                className="text-black font-semibold"
-                            >
-                                <span>Ver proyectos</span>
-                            </a>
-                        </div>
+                <div className='flex flex-wrap justify-center items-center gap-6 md:gap-8 py-16'>
+                    <div className='bg-violet-300/80 py-2 px-4 rounded-lg cursor-pointer hover:bg-violet-300 hover:scale-105 hover:-translate-y-1.5 transition-all duration-300'>
+                        <a 
+                            href='#projects' 
+                            className="text-black font-semibold"
+                        >
+                            <span>Ver proyectos</span>
+                        </a>
+                    </div>
+                    <a 
+                        href='/cv.pdf'
+                        download="Marco_Rodriguez - CV.pdf"
+                        className="flex items-center gap-4 font-semibold py-2 px-4 rounded-lg border border-white/5 hover:scale-110 hover:border-violet-300/80 cursor-pointer transition-all duration-300"
+                        style={{
+                            background: 'rgba(30, 30, 46, 0.6)',
+                            backdropFilter: 'blur(12px)',
+                            boxShadow: '0 4px 24px rgba(0,0,0,0.3)'                            
+                        }}>
+                        <DownloadIcon />                        
+                        <span>Descargar CV</span>
+                    </a>
                     <a 
                         href='#contact'
-                        className="flex items-center gap-4 font-semibold py-2 px-4 rounded-lg border border-white/5 hover:border-violet-300/80 hover:scale-105 cursor-pointer transition-all duration-300"
+                        className="flex items-center gap-4 font-semibold py-2 px-4 rounded-lg border border-white/5 hover:border-violet-300/80 hover:scale-110 cursor-pointer transition-all duration-300"
                         style={{
                             background: 'rgba(30, 30, 46, 0.6)',
                             backdropFilter: 'blur(12px)',

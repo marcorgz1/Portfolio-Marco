@@ -2,7 +2,11 @@ import '../css/Studies.css';
 import { SchoolIcon } from './Icons.jsx';
 import { StudyCard } from './StudyCard.jsx';
 
+import { useScrollFade } from '../hooks/useScrollFade.js';
+
 export function Studies () {
+    const { ref, isVisible } = useScrollFade();
+
     const STUDIES = [
         {
             title: 'Máster en Desarrollo Web Full Stack',
@@ -12,7 +16,7 @@ export function Studies () {
         {
             title: 'Grado Superior de Desarrollo de Aplicaciones Web',
             year: '2022 - 2024',
-            description: 'Aprendizaje básico de lenguajes de programación bastante utilizados en la actualidad como Python y Java, además de los HTML, CSS y Javascript vitales para comenzar en el desarrollo de aplicaciones web'
+            description: 'Aprendizaje básico de lenguajes de programación bastante utilizados en la actualidad como Python y Java, además de los HTML, CSS y Javascript vitales para comenzar en el desarrollo de aplicaciones web.'
         },
         {
             title: 'Grado Medio Sistemas Microinformáticos y Redes',
@@ -21,14 +25,19 @@ export function Studies () {
         }
     ]
     return (
-        <section id='studies' className='flex flex-col justify-center items-center gap-6 mb-32'>
+        <section 
+            id='studies'
+            ref={ref}
+            className={`flex flex-col justify-center items-center gap-6 mb-32 transition-all duration-700 ease-out
+                ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            >
             <div className='flex justify-center items-center gap-6 text-4xl font-bold mb-12'>
                 <span className='text-[#cba6f7]'>
                     <SchoolIcon />
                 </span>
                 <h1>Estudios</h1>
             </div>
-            <ul className='flex flex-col justify-center items-center gap-16 px-6 md:px-12 max-w-6xl'>
+            <ul className='flex flex-col justify-center items-center gap-16'>
             {
                 STUDIES.map((study, index) => (
                     <StudyCard key={index} title={study.title} year={study.year} description={study.description} />

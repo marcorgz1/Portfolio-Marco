@@ -11,7 +11,7 @@ export function ExperienceCard ({ title, company, year, description, technologie
 
             {/* Card */}
             <div 
-                className="flex flex-col gap-2 max-w-xl md:max-w-2xl ml-16 mb-10 rounded-2xl px-8 py-6 border border-white/5 transition-all duration-300 group-hover:border-violet-300/80 group-hover:scale-105"
+                className="flex flex-col gap-2 max-w-md md:max-w-2xl ml-16 mb-10 rounded-2xl px-8 py-6 border border-white/5 transition-all duration-300 group-hover:border-violet-300/80 group-hover:scale-105"
                 style={{
                     background: 'rgba(30, 30, 46, 0.6)',
                     backdropFilter: 'blur(12px)',
@@ -19,7 +19,7 @@ export function ExperienceCard ({ title, company, year, description, technologie
                 }}
             >
                 <div className="flex flex-wrap items-start justify-between gap-2 mb-1">
-                    <h3 className="text-[#cdd6f4] text-lg font-semibold leading-snug">
+                    <h3 className="text-[#cdd6f4] text-md md:text-lg font-semibold leading-snug">
                         {title}
                     </h3>
 

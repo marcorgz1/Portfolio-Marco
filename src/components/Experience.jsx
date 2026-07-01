@@ -1,7 +1,11 @@
 import { ExperienceCard } from "./ExperienceCard"
 import { ExperienceIcon } from "./Icons"
 
+import { useScrollFade } from '../hooks/useScrollFade.js';
+
 export function Experience () {
+    const { ref, isVisible } = useScrollFade();
+
     const EXPERIENCES = [
         {
             title: 'Prácticas técnico informático Apple',
@@ -27,7 +31,12 @@ export function Experience () {
 
     return (
         <>
-            <div id="experience" className="flex flex-col justify-center items-center mb-32">
+            <div 
+            id="experience"
+            ref={ref}
+            className={`flex flex-col justify-center items-center mb-32 transition-all duration-800 ease-out
+                ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+            >
                 <div className="flex justify-center items-center gap-6 text-4xl font-bold mb-20">
                     <span className="text-[#cba6f7]">
                         <ExperienceIcon />
