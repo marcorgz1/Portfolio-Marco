@@ -61,17 +61,16 @@ export function ProjectCard({ title, description, image, technologies, github, u
                             <a href={url} target='_blank'>Demo</a>
                         </button>
                     ) : (
-                        <span
-                            className='py-2 px-4 rounded-lg'
+                        <div className='flex justify-center items-center gap-4 py-2 px-4 rounded-lg'
                             style={{
                                 background: 'rgba(30, 30, 46, 0.6)',
                                 backdropFilter: 'blur(12px)',
                                 boxShadow: '0 4px 24px rgba(0,0,0,0.3)'
                             }} 
-                            disabled
-                        >
-                            ❌ Demo no disponible
-                        </span>
+                            disabled>
+                            <span>❌</span>
+                            <span>Demo no disponible</span>
+                        </div>
                     )
                 }
             </div>

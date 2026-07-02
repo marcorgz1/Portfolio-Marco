@@ -43,9 +43,9 @@ export function Contact() {
                 <ContactIcon />
                 Contáctame
             </h2>
-            <p className="text-center text-sm md:text-md px-6 md:px-0 font-semibold">
+            <p className="text-center text-sm md:text-md px-6 md:px-0">
                 ¿Estás buscando a alguien con quién colaborar en algún proyecto? 
-                No dudes en ponerte en contacto conmigo.
+                ¡Contáctame!
             </p>
             <div className="flex flex-col justify-center items-center gap-12">
                 <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 mt-4 mb-12">
