@@ -1,5 +1,3 @@
-import '../css/ProjectCard.css'
-
 export function ProjectCard({ title, description, image, technologies, github, url }) {
     return (
         <section 

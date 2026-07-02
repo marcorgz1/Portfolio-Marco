@@ -1,4 +1,3 @@
-import '../css/Studies.css';
 import { SchoolIcon } from './Icons.jsx';
 import { StudyCard } from './StudyCard.jsx';
 
@@ -21,7 +20,7 @@ export function Studies () {
         {
             title: 'Grado Medio Sistemas Microinformáticos y Redes',
             year: '2020 - 2022',
-            description: 'Aprendizaje de conocimientos básicos sobre diferentes campos de la informática como montaje de ordenadores, redes o sistemas operativos.'
+            description: 'Aprendizaje de conocimientos básicos sobre diferentes áreas de la informática, como el montaje y mantenimiento de equipos, la configuración de redes, la instalación y administración de sistemas operativos, así como tareas de soporte técnico y resolución de incidencias.'
         }
     ]
     return (

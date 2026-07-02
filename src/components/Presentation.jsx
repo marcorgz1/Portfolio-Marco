@@ -47,7 +47,7 @@ export function Presentation() {
     return (
         <section 
             id='presentation' 
-            className='flex flex-col-reverse md:flex-row justify-center items-center w-full mt-20 md:mt-32 px-4 md:px-0 gap-8 scroll-mt-32'>
+            className='flex flex-col-reverse md:flex-row justify-center items-center w-full mt-20 md:mt-32 px-4 md:px-0 gap-8 mb-32 scroll-mt-32'>
             <div className='flex flex-col justify-center items-center gap-6'>
                 <div className='flex flex-col justify-center items-center md:gap-4 mb-4 md:mb-8'>
                     <h2 className='text-4xl font-bold leading-relaxed'>Marco Rodriguez 👋</h2>

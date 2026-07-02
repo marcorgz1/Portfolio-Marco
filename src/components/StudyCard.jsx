@@ -1,11 +1,10 @@
-import '../css/Studies.css';
 import Timeline from './Timeline.jsx';
 
 export function StudyCard ({ title, year, description }) {
     return (
         <div className='relative group'>
             <Timeline />
-            <div className="flex flex-col justify-center gap-8 ml-16 mb-10 w-full max-w-md md:max-w-4xl rounded-2xl py-4 px-6 border border-white/5 transition-all duration-300 group-hover:border-violet-300/80 group-hover:-translate-y-0.5 group-hover:scale-105"
+            <div className="flex flex-col justify-center gap-8 ml-16 mb-10 max-w-md md:max-w-6xl rounded-2xl py-4 px-6 border border-white/5 transition-all duration-300 group-hover:border-violet-300/80 group-hover:-translate-y-0.5 group-hover:scale-105"
                 style={{
                         background: 'rgba(30, 30, 46, 0.6)',
                         backdropFilter: 'blur(12px)',

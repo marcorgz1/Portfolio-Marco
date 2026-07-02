@@ -1,17 +1,16 @@
-import '../css/Experience.css';
 import { CalendarIcon } from './Icons.jsx';
 import Timeline from './Timeline.jsx';
 
 export function ExperienceCard ({ title, company, year, description, technologies }) {
     return (
         // Perrmitir a las cards ocupar todo el ancho disponible omitiendo el ancho establecido por el posicionamiento flex contenedor padre
-        <div className="relative group">
+        <div className="relative group w-full max-w-lg md:max-w-7xl">
             {/* Timeline */}
             <Timeline />
 
             {/* Card */}
             <div 
-                className="flex flex-col gap-2 max-w-md md:max-w-2xl ml-16 mb-10 rounded-2xl px-8 py-6 border border-white/5 transition-all duration-300 group-hover:border-violet-300/80 group-hover:scale-105"
+                className="flex flex-col gap-2 ml-16 mb-10 rounded-2xl px-6 py-4 border border-white/5 transition-all duration-300 group-hover:border-violet-300/80 group-hover:scale-105"
                 style={{
                     background: 'rgba(30, 30, 46, 0.6)',
                     backdropFilter: 'blur(12px)',

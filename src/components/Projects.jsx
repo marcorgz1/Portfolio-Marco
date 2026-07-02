@@ -1,8 +1,7 @@
-import '../css/Projects.css'
-import { ToolsIcon } from './Icons'
-import { ProjectCard } from './ProjectCard'
-import firstProjectImage from '/projects/first_project.png'
-import secondProjectImage from '/projects/second_project.png'
+import { ToolsIcon } from './Icons.jsx';
+import { ProjectCard } from './ProjectCard.jsx';
+import firstProjectImage from '/projects/first_project.png';
+import secondProjectImage from '/projects/second_project.png';
 
 import { useScrollFade } from '../hooks/useScrollFade.js';
 

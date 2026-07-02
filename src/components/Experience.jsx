@@ -45,7 +45,7 @@ export function Experience () {
                         Experiencia
                     </h2>                
                 </div>
-                <div className="flex flex-col justify-center items-center gap-14 max-w-xl">
+                <div className="flex flex-col justify-center items-center gap-14 w-full">
                 {
                     EXPERIENCES.map((experience, index) => (
                         <ExperienceCard 
