@@ -58,8 +58,8 @@ export function Presentation() {
                         {displayedText}
                     </h1>
                 </div>
-                <div className="flex flex-col justify-center items-center gap-6 max-w-2xl mb-12">
-                    <p className='text-sm md:text-md text-center text-wrap'>
+                <div className="flex flex-col justify-center items-center gap-6 max-w-2xl md:max-w-80 mb-12">
+                    <p className='text-sm text-center text-wrap'>
                         Soy un <b>Desarrollador Web Frontend</b> apasionado en crear webs innovadoras
                         y únicas. Enfocado en aplicaciones mantenibles, escalables y con gran 
                         experiencia de usuario.

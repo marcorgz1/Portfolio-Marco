@@ -32,7 +32,7 @@ export function Navbar () {
                 }
                 </button>
             </div>
-            <ul className={`${menuIsOpen ? 'flex': 'hidden'} md:flex justify-center items-center py-4 gap-8 font-semibold`}>
+            <ul className={`${menuIsOpen ? 'flex': 'hidden'} md:flex justify-center items-center py-4 gap-6 sm:gap-12 font-semibold`}>
             {
                 NAV_SECTIONS.map((section) => (
                     <li 
@@ -42,7 +42,7 @@ export function Navbar () {
                             href={section.url}
                             // Cerrar menú de navegación al navegar a alguna sección
                             onClick={closeMenu}
-                            className="transition-colors hover:text-violet-300 hover:cursor-pointer"
+                            className="text-[12px] sm:text-md transition-colors hover:text-violet-300 hover:cursor-pointer"
                         >
                             {section.title}
                         </a>

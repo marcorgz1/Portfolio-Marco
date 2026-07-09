@@ -44,7 +44,7 @@ export function DevelopmentTools () {
                 <ToolsIcon />
                 Herramientas
             </h1>
-            <div className='grid grid-cols-1 md:grid-cols-3 max-w-md md:max-w-7xl mx-auto gap-24'>
+            <div className='grid grid-cols-3 md:grid-cols-1 max-w-md mx-auto gap-24'>
             {
                 DEVELOPMENT_TOOLS.map((development_tool, index) => (
                     <div 

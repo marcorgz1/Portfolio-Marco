@@ -1,7 +1,9 @@
 import { ToolsIcon } from './Icons.jsx';
 import { ProjectCard } from './ProjectCard.jsx';
+
 import firstProjectImage from '/projects/first_project.png';
 import secondProjectImage from '/projects/second_project.png';
+import thirdProjectImage from '/projects/third_project.png';
 
 import { useScrollFade } from '../hooks/useScrollFade.js';
 
@@ -21,6 +23,14 @@ const PROJECTS = [
         technologies: ['React', 'NodeJS', 'MySQL'],
         github: 'https://github.com/marcorgz1/Aplicacion-Gestion-Trenes-Tenfe',
         url: 'https://tenfe.onrender.com'
+    },
+    {
+        title: 'Madera Encantada',
+        description: 'Landing page sencilla para realizar publicidad sobre casas prefabricadas y casas construidas con troncos de madera.',
+        image: thirdProjectImage,
+        technologies: ['Astro', 'Tailwind CSS'],
+        github: 'https://github.com/marcorgz1/pagina-web-madera-encantada',
+        url: 'https://www.madera-encantada.com'
     }
 ]
 
@@ -38,7 +48,7 @@ export function Projects() {
                 <ToolsIcon />
                 <h1 className='text-4xl font-bold'>Proyectos</h1>
             </div>
-            <div className='flex flex-col md:flex-row justify-center items-center max-w-md md:max-w-6xl gap-32 py-8'>
+            <div className='grid grid-cols-2 md:grid-cols-1 gap-32 justify-center items-center max-w-6xl md:max-w-xl py-8'>
             {
                 PROJECTS.map((project, index) => (
                     <div key={index}>
