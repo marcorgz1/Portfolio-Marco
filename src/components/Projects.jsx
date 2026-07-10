@@ -48,7 +48,7 @@ export function Projects() {
                 <ToolsIcon />
                 <h1 className='text-4xl font-bold'>Proyectos</h1>
             </div>
-            <div className='grid grid-cols-2 md:grid-cols-1 gap-32 justify-center items-center max-w-6xl md:max-w-xl py-8'>
+            <div className='grid grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-32 justify-center items-center max-w-xl lg:max-w-6xl md:max-w-xl sm:max-w-xl py-8'>
             {
                 PROJECTS.map((project, index) => (
                     <div key={index}>

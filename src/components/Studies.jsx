@@ -36,7 +36,7 @@ export function Studies () {
                 </span>
                 <h1>Estudios</h1>
             </div>
-            <ul className='flex flex-col justify-center items-center gap-16 md:max-w-2xl'>
+            <ul className='flex flex-col justify-center items-center gap-16 lg:max-w-4xl md:max-w-2xl'>
             {
                 STUDIES.map((study, index) => (
                     <StudyCard key={index} title={study.title} year={study.year} description={study.description} />

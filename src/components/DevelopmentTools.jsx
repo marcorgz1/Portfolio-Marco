@@ -40,11 +40,11 @@ export function DevelopmentTools () {
             className={`flex flex-col justify-center items-center gap-6 mb-32 transition-all duration-800 ease-out
                 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
-            <h1 className='flex justify-center items-center gap-6 text-4xl font-bold text-center mb-14'>
+            <h1 className='flex justify-center items-center gap-6 text-4xl font-bold text-center mb-20'>
                 <ToolsIcon />
                 Herramientas
             </h1>
-            <div className='grid grid-cols-3 md:grid-cols-1 max-w-md mx-auto gap-24'>
+            <div className='grid grid-cols-3 lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 max-w-6xl lg:max-w-6xl md:max-w-2xl sm:max-w-lg mx-auto gap-24'>
             {
                 DEVELOPMENT_TOOLS.map((development_tool, index) => (
                     <div 

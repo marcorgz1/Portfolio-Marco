@@ -42,7 +42,7 @@ export function Navbar () {
                             href={section.url}
                             // Cerrar menú de navegación al navegar a alguna sección
                             onClick={closeMenu}
-                            className="text-[12px] sm:text-md transition-colors hover:text-violet-300 hover:cursor-pointer"
+                            className="text-xl lg:text-lg sm:text-sm transition-colors hover:text-violet-300 hover:cursor-pointer"
                         >
                             {section.title}
                         </a>
